@@ -101,7 +101,6 @@ pre: " <b> 4.2 </b> "
 - Publish new version of function `myfunction` (`2`):
 
   ```bash
-  # Publish new version of function
   aws lambda publish-version --function-name myfunction
   ```
 
@@ -151,7 +150,9 @@ pre: " <b> 4.2 </b> "
       --period 300
     ```
 
-#### Generate traffic to new version
+#### Test our canary deployment
+
+##### Generate traffic to new version
 
 But first we'll need to generate the traffic to our function.
 
@@ -196,6 +197,8 @@ But first we'll need to generate the traffic to our function.
 
 - But we don't need to invoke the old version, we only want to health check the new version.
 
+##### Health check the new version
+
 - Make a `health-check.sh` script to health check the new version
 
   ```bash
@@ -229,6 +232,8 @@ But first we'll need to generate the traffic to our function.
   ![alt text](/images/workshop-5/lambda--health-check.png)
 
 - Wait for the wait time to passed (e.g. 5 min), if everything looks good, let's shift all the traffic to the new version.
+
+#### Shift all traffic to new version
 
 - Set the primary version on the alias to the new version (version `2`) and reset the additional versions (100% traffic will routed to version `2`)
 

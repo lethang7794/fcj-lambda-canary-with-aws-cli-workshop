@@ -1,5 +1,5 @@
 ---
-title: "Lambda deployment using AWS CLI"
+title: "Lambda normal deployment using AWS CLI"
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "

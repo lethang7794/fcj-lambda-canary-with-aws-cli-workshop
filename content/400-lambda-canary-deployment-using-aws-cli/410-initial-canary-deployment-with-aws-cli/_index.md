@@ -12,7 +12,6 @@ Before performing a canary deployment and shift traffic to a new version of your
 #### Publish a version of Lambda function
 
 ```bash
-# Publish new version of function
 aws lambda publish-version --function-name myfunction
 ```
 
@@ -64,11 +63,8 @@ aws lambda publish-version --function-name myfunction
 Output
 ![alt text](/images/workshop-5/lambda--publish-version.png)
 
-> [!NOTE]
-> Notice:
->
-> - `Version` is changed from `$LATEST` to `1`.
-> - `FunctionArn` is now `arn:aws:lambda:ap-southeast-1:971422684006:function:myfunction:1`. (The same as previous but with a suffix of `:1`).
+- `Version` is changed from `$LATEST` to `1`.
+- `FunctionArn` is now `arn:aws:lambda:ap-southeast-1:971422684006:function:myfunction:1`. (The same as previous but with a suffix of `:1`).
 
 #### Create an alias point to the first version
 
@@ -127,13 +123,14 @@ Output
 
   ![alt text](/images/workshop-5/lambda--invoke-alias.png)
 
-> [!NOTE]
-> Although the responses for all invocations are the same:
->
-> - ![alt text](/images/workshop-5/lambda--invoke-response.png)
->
-> The `ExecutedVersion` are differences:
->
-> - When invoking `myfunction`: `ExecutedVersion` is `$LATEST`.
-> - When invoking `myfunction:1`: `ExecutedVersion` is `1`.
-> - When invoking `myfunction:myalias`: `ExecutedVersion` is `1` (same version as of `myfunction:1`).
+---
+
+Although the responses for all invocations are the same:
+
+![alt text](/images/workshop-5/lambda--invoke-response.png)
+
+The `ExecutedVersion` are differences:
+
+- When invoking `myfunction`: `ExecutedVersion` is `$LATEST`.
+- When invoking `myfunction:1`: `ExecutedVersion` is `1`.
+- When invoking `myfunction:myalias`: `ExecutedVersion` is `1` (same version as of `myfunction:1`).
