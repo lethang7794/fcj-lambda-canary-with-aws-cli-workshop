@@ -1,6 +1,6 @@
 ---
 title: Implementing Lambda canary deployments using AWS CLI
-weight: 1
+weight: 15
 chapter: false
 ---
 
