@@ -1,24 +1,22 @@
 ---
-title: "Introduction"
-weight: 1
+title: "Deployment strategies"
+weight: 2
 chapter: false
-pre: " <b> 1. </b> "
+pre: " <b> 1.2. </b> "
 ---
 
-## TODO: Introduction for services used in the workshop
+### Deployment strategies
 
-{{%notice note%}}
-This is a _note_ **notice/alert/call-out** in Hugo's shortcode syntax.
-{{%/notice%}}
+[Deployment strategies](https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/deployment-strategies.html) define how you want to deliver your software. Organizations follow different deployment strategies based on their business model. Some choose to deliver software that is fully tested, and others might want their users to provide feedback and let their users evaluate under development features (such as Beta releases).
 
-> [!NOTE]
-> This is a _note_ **notice/alert/call-out** in GitHub markdown syntax.
+AWS Lambda support 5 deployment strategies[^1]:
 
-> [!TIP]
-> This is a _tip_ **notice/alert/call-out** in GitHub markdown syntax.
+[^1]: <https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/deployment-strategies-matrix.html>
 
-> [!INFO]
-> This is an _info_ **notice/alert/call-out** in GitHub markdown syntax.
+- In-place deployment
+- Blue-green deployment
+- Canary deployment
+- Linear deployment
+- All-at-once deployment
 
-> [!WARNING]
-> This is a _warning_ **notice/alert/call-out** in GitHub markdown syntax.
+For more information about characteristics of each deployment strategy, see [AWS Whitepaper | Practicing Continuous Integration and Continuous Delivery on AWS | Deployment methods](https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/deployment-methods.html).
