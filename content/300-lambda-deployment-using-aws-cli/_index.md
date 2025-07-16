@@ -5,6 +5,8 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
+Before implementing a Lambda canary deployment with AWS CLI, we will first implement a normal deployment for Lambda using AWS CLI.
+
 When deploying a Lambda function using AWS CLI, there are two scenarios to consider:
 
 1. **Initial Deployment**: When deploying the Lambda function for the first time

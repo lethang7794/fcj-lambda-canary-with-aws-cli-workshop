@@ -1,10 +1,10 @@
 ---
-title: TODO - Workshop title (Homepage metatada)
+title: Implementing Lambda canary deployments using AWS CLI
 weight: 1
 chapter: false
 ---
 
-# TODO: WORKSHOP TITLE (In Homepage)
+# Implementing Lambda canary deployments using AWS CLI
 
 ## TODO: WORKSHOP OVERVIEW
 
