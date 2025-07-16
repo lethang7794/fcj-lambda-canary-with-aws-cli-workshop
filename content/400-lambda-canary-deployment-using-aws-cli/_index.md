@@ -5,26 +5,25 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-## Lambda canary deployment using AWS CLI
+To have a deep understanding of
 
-> [!IMPORTANT]
-> To have a deep understanding of
->
-> - how canary deployment with Lambda
-> - when implementing canary deployment for Lambda with AWS CDK, what does AWS CDK do under the hood
->
-> this workshop will also implement
->
-> - a normal deployment (aka `all-in-once` deployment)
-> - a canary deployment
->
-> for Lambda using AWS CLI.
->
-> You can skip straight to the canary deployment implement for Lambda using CDK.
+- how canary deployment with Lambda
+- when implementing canary deployment for Lambda with AWS CDK, what does AWS CDK do under the hood
+
+this workshop will also implement
+
+- a normal deployment (aka `all-in-once` deployment)
+- a canary deployment
+
+for Lambda using AWS CLI.
+
+You can skip straight to the canary deployment implement for Lambda using CDK.
 
 <!-- TODO: Link to CDK -->
 
 See [lambda-canary.md](./lambda-canary.md)
+
+## Lambda canary deployment using AWS CLI
 
 Just as when deploy a Lambda function, there are 2 scenarios when you perform a canary deployment:
 

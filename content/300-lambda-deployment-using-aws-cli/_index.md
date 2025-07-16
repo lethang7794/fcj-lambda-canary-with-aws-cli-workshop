@@ -5,29 +5,14 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-> [!IMPORTANT]
-> To have a deep understanding of
->
-> - how canary deployment works with Lambda
-> - when implementing canary deployment for Lambda with AWS CDK, what does AWS CDK do under the hood
->
-> this workshop will also implement
->
-> - a normal deployment (aka `all-in-once` deployment)
-> - a canary deployment
->
-> for Lambda using AWS CLI.
->
-> You can skip straight to the canary deployment implement for Lambda using CDK.
-
-<!-- TODO: Link to CDK -->
-
 When deploying a Lambda function using AWS CLI, there are two scenarios to consider:
 
 1. **Initial Deployment**: When deploying the Lambda function for the first time
 2. **Code Update**: When updating the code of an existing Lambda function
 
 Each scenario requires a different AWS CLI command to ensure proper deployment.
+
+{{% toc %}}
 
 ### Initial Deployment with AWS CLI
 
