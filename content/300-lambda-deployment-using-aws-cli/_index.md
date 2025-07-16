@@ -1,11 +1,9 @@
 ---
-title: "TODO: Section 3 - title"
+title: "Lambda deployment using AWS CLI"
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
-
-## Lambda deployment using AWS CLI
 
 > [!IMPORTANT]
 > To have a deep understanding of
