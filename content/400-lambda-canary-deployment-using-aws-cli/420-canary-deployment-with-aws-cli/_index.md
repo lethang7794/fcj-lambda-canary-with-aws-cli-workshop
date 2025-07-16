@@ -5,7 +5,9 @@ chapter: false
 pre: " <b> 4.2 </b> "
 ---
 
-### Canary Deployment with AWS CLI
+{{% toc %}}
+
+---
 
 - After the initial canary deployment, you have:
 
@@ -149,7 +151,7 @@ pre: " <b> 4.2 </b> "
       --period 300
     ```
 
-##### Generate traffic to new version
+#### Generate traffic to new version
 
 But first we'll need to generate the traffic to our function.
 

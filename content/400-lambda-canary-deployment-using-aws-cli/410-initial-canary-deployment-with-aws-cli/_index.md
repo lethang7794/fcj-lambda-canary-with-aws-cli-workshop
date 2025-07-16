@@ -5,9 +5,9 @@ chapter: false
 pre: " <b> 4.1 </b> "
 ---
 
-### Initial Canary Deployment with AWS CLI
+Before performing a canary deployment and shift traffic to a new version of your Lambda function, first you need to perform the **initial canary deployment** (all traffic will be routed to the first version).
 
-Before performing a canary deployment and shift traffic to a new version of your Lambda function, first you need to perform the **initial canary deployment** (all traffic will be routed to the only version).
+{{% toc %}}
 
 #### Publish a version of Lambda function
 
