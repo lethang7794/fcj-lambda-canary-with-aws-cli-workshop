@@ -1,4 +1,8 @@
-# Lambda canary deployments using AWS CLI
+---
+title: Implementing Lambda canary deployments using AWS CLI
+weight: 1
+chapter: false
+---
 
 ## Introduction
 
@@ -11,9 +15,7 @@ When you create a Lambda function, you package your _function code_ (and its dep
 ![alt text](/images/diagrams/workshop-5/lambda--deployment-package.drawio.png)
 
 > [!NOTE]
-> Lambda supports two types of deployment packages: container images and `.zip` file archives.
->
-> To simplify, we only consider a Lambda function backed by a `.zip` file archive.
+> Lambda supports two types of deployment packages: container images and `.zip` file archives. To simplify, we only consider a Lambda function backed by a `.zip` file archive.
 
 #### Updating function code for a Lambda function
 
@@ -30,9 +32,7 @@ When you create a Lambda function, you package your _function code_ (and its dep
 ![alt text](/images/diagrams/workshop-5/lambda--version.drawio.png)
 
 > [!NOTE]
-> There is always a version named `$LATEST`.
->
-> To take a snapshot of the code and the configuration of the `$LATEST` version, you _publish_ new version from the `$LATEST` version.
+> There is always a version named `$LATEST`. To take a snapshot of the code and the configuration of the `$LATEST` version, you _publish_ **a version** from the `$LATEST` version.
 
 #### Alias points to a specific version
 
@@ -76,18 +76,10 @@ Canary deployment means you shift traffic to a new version of your application i
 - To verify that the new version is healthy, you can use CloudWatch alarms to monitor the [invocation metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#invocation-metrics) `Errors`
 
 > [!NOTE]
-> For AWS Lambda, the _wait time_ is the time between
->
-> - the start of the canary deployment, and
-> - the time when the new version is fully weighted (100% traffic is routed to the new version).
->
-> Usually, it is one of the following values: 5 min, 10 min, 15 min, 30 min.
+> For AWS Lambda, the _wait time_ is the time between: 1. the start of the canary deployment, and 2. the time when the new version is fully weighted (100% traffic is routed to the new version). Usually, it is one of the following values: 5 min, 10 min, 15 min, 30 min.
 
 > [!TIP]
-> AWS Lambda integrates with other AWS services to help you monitor and troubleshoot your Lambda functions.
->
-> - Lambda automatically monitors Lambda functions on your behalf and reports metrics through Amazon CloudWatch.
-> - To help you monitor your code when it runs, Lambda automatically tracks the number of requests, the invocation duration per request, and the number of requests that result in an error.
+> AWS Lambda integrates with other AWS services to help you monitor and troubleshoot your Lambda functions. Lambda automatically monitors Lambda functions on your behalf and reports metrics through Amazon CloudWatch. To help you monitor your code when it runs, Lambda automatically tracks the number of requests, the invocation duration per request, and the number of requests that result in an error.
 
 ## Preparation
 
